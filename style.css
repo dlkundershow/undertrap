@@ -1,0 +1,121 @@
+/* Estilos generales */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #0a0a0a;
+  color: #e0e0e0;
+}
+
+h1, h2, h3 {
+  font-family: 'Courier New', monospace;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+a {
+  text-decoration: none;
+  color: #b300ff;
+  transition: 0.3s;
+}
+a:hover {
+  color: #fff;
+}
+
+/* Header */
+header {
+  background: #111;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 2px solid #b300ff;
+}
+header h1 {
+  color: #b300ff;
+  font-size: 1.8rem;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+header nav ul li a {
+  color: #e0e0e0;
+  font-weight: bold;
+}
+
+/* Home */
+.home {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: linear-gradient(180deg, #0a0a0a, #1a1a1a);
+}
+.home-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.home h2 {
+  color: #b300ff;
+  margin-bottom: 1rem;
+}
+
+/* Catálogo */
+.catalogo {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.catalogo h2 {
+  margin-bottom: 2rem;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Siempre 2 columnas */
+  gap: 2rem;
+  justify-content: center; /* Centrar contenido si sobra espacio */
+}
+.item {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #b300ff;
+  border-radius: 10px;
+}
+.item img {
+  width: 100%;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.item:hover img {
+  transform: scale(1.1);
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0,0,0,0.85);
+  color: #fff;
+  width: 100%;
+  padding: 1rem;
+  text-align: left;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+}
+.item:hover .overlay {
+  transform: translateY(0);
+}
+
+/* Contacto */
+.contacto {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.contacto strong {
+  color: #b300ff;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #111;
+  border-top: 2px solid #b300ff;
+  font-size: 0.9rem;
+}
