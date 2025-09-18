@@ -7,11 +7,11 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Encabezado -->
-  <header>
-    <h1>Palermo Codeina</h1>
+  <!-- HEADER -->
+  <header class="header">
+    <h1 class="logo">Palermo Codeina</h1>
     <nav>
-      <ul>
+      <ul class="nav-links">
         <li><a href="#home">Inicio</a></li>
         <li><a href="#catalogo">Catálogo</a></li>
         <li><a href="#contacto">Contacto</a></li>
@@ -19,159 +19,138 @@
     </nav>
   </header>
 
-  <!-- Sección Home -->
+  <!-- HOME -->
   <section id="home" class="home">
     <div class="home-container">
-
-      <h2 class="texto home">
-        Esto es como la Deep Web pero aca vas a encontrar artistas re cebados del under argentino.
+      <h2>
+        Esto es como la Deep Web, pero acá vas a encontrar artistas re cebados del under argentino.
       </h2>
-      <h3>
-        PAGINA EN DESARROLLO.(Mantenimiento en proceso) </h3>
-
-      </p>
+      <p class="sub">⚡ Página en desarrollo ⚡</p>
     </div>
   </section>
 
-  <!-- Sección Catálogo -->
+  <!-- CATÁLOGO -->
   <section id="catalogo" class="catalogo">
-   
     <h2>Catálogo de Artistas</h2>
-   
     <div class="grid">
-      <!-- Item de ejemplo -->
 
-            <div class="item">
-        <img src="cero.jpg" alt="cero">
-        <div class="overlay">
+      <!-- Item -->
+      <div class="item">
+        <img src="cero.jpg" alt="Cero*">
+        <div class="info">
           <h3>Cero*</h3>
-          <button onclick="window.open('https://www.instagram.com/ceroasterisco/', '_blank')">@ceroasterisco</button>
-          <p>Tema: "Mr. Wow"</p>
-          <a href="https://www.youtube.com/watch?v=XaZzIbbXAA0" target="_blank">Ver Video</a>
+          <a href="https://www.instagram.com/ceroasterisco/" target="_blank">@ceroasterisco</a>
+          <p>"Mr. Wow"</p>
+          <a class="btn" href="https://www.youtube.com/watch?v=XaZzIbbXAA0" target="_blank">Ver Video</a>
         </div>
       </div>
 
-            <div class="item">
-        <img src="swaggerman.jpg" alt="swaggerman">
-        <div class="overlay">
+      <div class="item">
+        <img src="swaggerman.jpg" alt="Swaggerman">
+        <div class="info">
           <h3>Swaggerman</h3>
-          <button onclick="window.open('https://www.instagram.com/swaggermannn/', '_blank')">@swaggermannn</button>
-          <p>Tema: "Mi propio swag"</p>
-          <a href="https://www.youtube.com/watch?v=UACve-QRFMo" target="_blank">Escuchar</a>
+          <a href="https://www.instagram.com/swaggermannn/" target="_blank">@swaggermannn</a>
+          <p>"Mi propio swag"</p>
+          <a class="btn" href="https://www.youtube.com/watch?v=UACve-QRFMo" target="_blank">Escuchar</a>
         </div>
       </div>
 
       <div class="item">
         <img src="jugo.jpg" alt="Jugo!">
-        <div class="overlay">
+        <div class="info">
           <h3>Jugo!</h3>
-          <button onclick="window.open('https://www.instagram.com/juicynise7/', '_blank')">@juicynise7</button>
-          <p>Tema: "Un solo cable"</p>
-          <a href="https://www.youtube.com/watch?v=tetTy3jy2cQ" target="_blank">Ver Video</a>
+          <a href="https://www.instagram.com/juicynise7/" target="_blank">@juicynise7</a>
+          <p>"Un solo cable"</p>
+          <a class="btn" href="https://www.youtube.com/watch?v=tetTy3jy2cQ" target="_blank">Ver Video</a>
         </div>
       </div>
 
-
-
-            <div class="item">
-        <img src="dolyflako.jpg" alt="dolyflako">
-        <div class="overlay">
+      <div class="item">
+        <img src="dolyflako.jpg" alt="DolyFlackko">
+        <div class="info">
           <h3>DolyFlackko</h3>
-          <button onclick="window.open('https://www.instagram.com/dolyflackko/', '_blank')">@dolyflackko</button>
-          <p>Tema: "Ultimo momento"</p>
-          <a href="https://www.youtube.com/watch?v=uCF-6mE8ji0" target="_blank">Escuchar</a>
+          <a href="https://www.instagram.com/dolyflackko/" target="_blank">@dolyflackko</a>
+          <p>"Último momento"</p>
+          <a class="btn" href="https://www.youtube.com/watch?v=uCF-6mE8ji0" target="_blank">Escuchar</a>
         </div>
       </div>
 
 
 
-            <div class="item">
-        <img src="Screenshot_20250904_190527_Instagram (1).jpg" alt="eqys">
-        <div class="overlay">
-          <h3>EQYS X_X</h3>
-          <button onclick="window.open('https://www.instagram.com/boumper_x/', '_blank')">@boumper_x</button>
-          <p>Tema: "Who am i?"</p>
-          <a href="https://www.youtube.com/watch?v=CNdEq4nJmwI" target="_blank">Escuchar</a>
-        </div>
-      </div>
-   
-      
       <div class="item">
-        <img src="dexxxx.jpg" alt="dexter">
-        <div class="overlay">
+        <img src="dexxxx.jpg" alt="Dexter">
+        <div class="info">
           <h3>Dexter</h3>
-          <button onclick="window.open('https://www.instagram.com/dexteer.dx/', '_blank')">@dexteer.dx</button>
-          <p>Tema: "Tussy (ft. Boppie) "</p>
-          <a href="https://www.youtube.com/watch?v=DhV7ui_Fs1U" target="_blank">Ver Video</a>
+          <a href="https://www.instagram.com/dexteer.dx/" target="_blank">@dexteer.dx</a>
+          <p>"Tussy (ft. Boppie)"</p>
+          <a class="btn" href="https://www.youtube.com/watch?v=DhV7ui_Fs1U" target="_blank">Ver Video</a>
         </div>
       </div>
 
-
-
-
-            <div class="item">
-        <img src="dani.jpg" alt="dahn">
-        <div class="overlay">
+      <div class="item">
+        <img src="dani.jpg" alt="xDahnx">
+        <div class="info">
           <h3>xDahnx</h3>
-          <button onclick="window.open('https://www.instagram.com/xdahnx/', '_blank')">@xdahnx</button>
-          <p>Tema: "Key Hole"</p>
-          <a href="https://www.youtube.com/watch?v=I6QOJEqdXTM" target="_blank">Ver Video</a>
+          <a href="https://www.instagram.com/xdahnx/" target="_blank">@xdahnx</a>
+          <p>"Key Hole"</p>
+          <a class="btn" href="https://www.youtube.com/watch?v=I6QOJEqdXTM" target="_blank">Ver Video</a>
         </div>
       </div>
-      
-      
-      
-      <div class="item">
-        <img src="krel.jpg" alt="krel">
-        <div class="overlay">
-          <h3>Krel</h3>
-         <button onclick="window.open('https://www.instagram.com/krel.truth/', '_blank')">@krel.truth</button>
-        <p>Tema: "De tiger a goat"</p>
-         <a href="https://www.youtube.com/watch?v=nRNUOCg-WEg" target="_blank">Full Album</a>
-        </div>
-      </div>
-            
-      
-      
-      <div class="item">
-        <img src="blacky.jpg" alt="blacky">
-        <div class="overlay">
-          <h3>Blacky</h3>
-            <button onclick="window.open('https://www.instagram.com/blacky17.svt/', '_blank')">@blacky17.svt</button>
-          <p>Tema: "GELLY3"</p>
-          <a href="https://www.youtube.com/watch?v=ZdhWRt2H944&t=1s" target="_blank">Ver Video</a>
-        
-        
-        </div>
-      </div>
-      <div class="item">
-        <img src="erre.jpg" alt="erre">
-        <div class="overlay">
-          <h3>ERRE</h3>
-           <button onclick="window.open('https://www.instagram.com/erre_.777/', '_blank')">@erre_.777</button>
-          <p>Tema: "ZOUKREIZE"</p>
-          <a href="https://www.youtube.com/watch?v=OOwjFQ4Zq5A" target="_blank">Escuchar</a>
-        </div>
-      </div>
-      
 
-      
-      <!-- Agregás más artistas copiando el bloque .item -->
+      <div class="item">
+        <img src="krel.jpg" alt="Krel">
+        <div class="info">
+          <h3>Krel</h3>
+          <a href="https://www.instagram.com/krel.truth/" target="_blank">@krel.truth</a>
+          <p>"De tiger a goat"</p>
+          <a class="btn" href="https://www.youtube.com/watch?v=nRNUOCg-WEg" target="_blank">Full Album</a>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="blacky.jpg" alt="Blacky">
+        <div class="info">
+          <h3>Blacky</h3>
+          <a href="https://www.instagram.com/blacky17.svt/" target="_blank">@blacky17.svt</a>
+          <p>"GELLY3"</p>
+          <a class="btn" href="https://www.youtube.com/watch?v=ZdhWRt2H944&t=1s" target="_blank">Ver Video</a>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="erre.jpg" alt="ERRE">
+        <div class="info">
+          <h3>Erre</h3>
+          <a href="https://www.instagram.com/erre_.777/" target="_blank">@erre_.777</a>
+          <p>"ZOUKREIZE"</p>
+          <a class="btn" href="https://www.youtube.com/watch?v=OOwjFQ4Zq5A" target="_blank">Escuchar</a>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="Screenshot_20250904_190527_Instagram (1).jpg" alt="EQYS X_X">
+        <div class="info">
+          <h3>Eqys</h3>
+          <a href="https://www.instagram.com/boumper_x/" target="_blank">@boumper_x</a>
+          <p>"Who am I?"</p>
+          <a class="btn" href="https://www.youtube.com/watch?v=CNdEq4nJmwI" target="_blank">Escuchar</a>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- Sección Contacto -->
+  <!-- CONTACTO -->
   <section id="contacto" class="contacto">
     <h2>Contacto</h2>
-    <p>¿Querés aparecer en el catálogo? Escribinos a <strong>dlkunderground@gmail.com</strong> <strong>@palermo.codeina</strong></p>
+    <p>¿Querés aparecer en el catálogo? Escribinos:</p>
+    <p><strong>dlkunderground@gmail.com</strong></p>
+    <p><strong>@palermo.codeina</strong></p>
   </section>
 
+  <!-- FOOTER -->
   <footer>
-    <p>Palermo Codeina © 2025 - Difusión Palermo Codeina</p>
+    <p>Palermo Codeina © 2025 - Difusión Under</p>
   </footer>
-
-
-
 </body>
 </html>
-
