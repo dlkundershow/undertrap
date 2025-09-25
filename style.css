@@ -15,7 +15,7 @@
 
 body {
   font-family: "Arial", sans-serif;
-   background: url("fondo6.png") no-repeat center center fixed;
+   background: url("fondo.png") no-repeat center center fixed;
   background-size: cover;
   position: relative;
  
@@ -208,3 +208,4 @@ footer {
   border-top: 1px solid var(--neon-green);
   background: #0b0b0d;
 }
+
