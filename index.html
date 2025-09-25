@@ -20,19 +20,31 @@
     </nav>
   </header>
 
-  <section id="home" class="home">
-    <div class="home-container">
-      <h2>
-        Esto es como la Deep Web, pero acá vas a encontrar artistas re cebados del under argentino.
-      </h2>
-      <p class="sub">⚡ Página en desarrollo ⚡</p>
-    </div>
-  </section>
+<section id="game">
+  <h2>🔥 Selecciona tus personajes 🔥</h2>
+  <div id="character-select">
+    <div class="slot" id="slot-left">Jugador 1</div>
+    <canvas id="fightCanvas" width="600" height="300"></canvas>
+    <div class="slot" id="slot-right">Jugador 2</div>
+  </div>
+</section>
+
+<!-- Modal de selección -->
+<div id="character-modal" class="hidden">
+  <h3>Elige tu personaje</h3>
+  <div id="character-grid"></div>
+</div>
+
+<script src="game.js"></script>
+
+
 
 
   <section id="catalogo" class="catalogo">
     <h2>Catálogo de Artistas</h2>
     <div class="grid">
+
+
 
 
       <div class="item">
@@ -44,6 +56,8 @@
           <a class="btn" href="https://www.youtube.com/watch?v=igeNYXemNiY" target="_blank">Escuchar</a>
         </div>
       </div>
+
+      
 
 
       <div class="item">
@@ -259,6 +273,7 @@
 
 
 
+
     </div>
   </section>
 
@@ -276,4 +291,3 @@
   </footer>
 </body>
 </html>
-
