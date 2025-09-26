@@ -193,3 +193,99 @@ paddle2.y += (ball.y - (paddle2.y + paddle2.h / 2)) * 0.15;
 
   loop();
 }
+let paddle1, paddle2, ball;
+let keys = {}; // teclas presionadas
+let mobileInput = { p1: 0, p2: 0 }; // dirección de cada jugador
+
+// Detectar móvil → mostrar controles
+if ('ontouchstart' in window) {
+  document.getElementById("mobile-controls").classList.remove("hidden");
+
+  document.querySelectorAll("#mobile-controls button").forEach(btn => {
+    btn.addEventListener("touchstart", () => {
+      const player = btn.dataset.player;
+      const dir = btn.dataset.dir;
+      if (player === "1") mobileInput.p1 = dir === "up" ? -5 : 5;
+      if (player === "2") mobileInput.p2 = dir === "up" ? -5 : 5;
+    });
+    btn.addEventListener("touchend", () => {
+      const player = btn.dataset.player;
+      if (player === "1") mobileInput.p1 = 0;
+      if (player === "2") mobileInput.p2 = 0;
+    });
+  });
+}
+
+// Eventos teclado
+window.addEventListener("keydown", e => keys[e.key] = true);
+window.addEventListener("keyup", e => keys[e.key] = false);
+
+function startPingPong() {
+  let paddleSize = 60;
+  paddle1 = { x: 40, y: canvas.height / 2 - paddleSize / 2, w: paddleSize, h: paddleSize };
+  paddle2 = { x: canvas.width - 40 - paddleSize, y: canvas.height / 2 - paddleSize / 2, w: paddleSize, h: paddleSize };
+
+  ball = { x: canvas.width / 2, y: canvas.height / 2, r: 10, dx: 4, dy: 3 };
+
+  const img1 = new Image(); img1.src = player1.img;
+  const img2 = new Image(); img2.src = player2.img;
+
+  function draw() {
+    ctx.fillStyle = "#111";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.drawImage(img1, paddle1.x, paddle1.y, paddle1.w, paddle1.h);
+    ctx.drawImage(img2, paddle2.x, paddle2.y, paddle2.w, paddle2.h);
+
+    ctx.fillStyle = "#fff";
+    ctx.beginPath();
+    ctx.arc(ball.x, ball.y, ball.r, 0, Math.PI * 2);
+    ctx.fill();
+  }
+
+  function update() {
+    // Movimiento teclado PC
+    if (keys["w"]) paddle1.y -= 5;
+    if (keys["s"]) paddle1.y += 5;
+    if (keys["i"]) paddle2.y -= 5;
+    if (keys["k"]) paddle2.y += 5;
+
+    // Movimiento táctil móvil
+    paddle1.y += mobileInput.p1;
+    paddle2.y += mobileInput.p2;
+
+    // Movimiento de la pelota
+    ball.x += ball.dx;
+    ball.y += ball.dy;
+
+    if (ball.y - ball.r < 0 || ball.y + ball.r > canvas.height) {
+      ball.dy *= -1;
+    }
+
+    if (ball.x - ball.r < paddle1.x + paddle1.w &&
+        ball.y > paddle1.y &&
+        ball.y < paddle1.y + paddle1.h) {
+      ball.dx *= -1;
+    }
+
+    if (ball.x + ball.r > paddle2.x &&
+        ball.y > paddle2.y &&
+        ball.y < paddle2.y + paddle2.h) {
+      ball.dx *= -1;
+    }
+
+    if (ball.x - ball.r < 0 || ball.x + ball.r > canvas.width) {
+      ball.x = canvas.width / 2;
+      ball.y = canvas.height / 2;
+      ball.dx *= -1;
+    }
+  }
+
+  function loop() {
+    update();
+    draw();
+    requestAnimationFrame(loop);
+  }
+
+  loop();
+}
