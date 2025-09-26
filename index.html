@@ -21,13 +21,26 @@
   </header>
 
 <section id="game">
-  <h2>🔥 Pagina en desarrollo 🔥</h2>
+  <h2>🔥 Selecciona tus personajes 🔥</h2>
   <div id="character-select">
     <div class="slot" id="slot-left">Jugador 1</div>
     <canvas id="fightCanvas" width="600" height="300"></canvas>
     <div class="slot" id="slot-right">Jugador 2</div>
   </div>
+
+  <!-- Controles táctiles -->
+  <div id="mobile-controls" class="hidden">
+    <div class="controls left-controls">
+      <button data-player="1" data-dir="up">⬆️</button>
+      <button data-player="1" data-dir="down">⬇️</button>
+    </div>
+    <div class="controls right-controls">
+      <button data-player="2" data-dir="up">⬆️</button>
+      <button data-player="2" data-dir="down">⬇️</button>
+    </div>
+  </div>
 </section>
+
 
 <!-- Modal de selección -->
 <div id="character-modal" class="hidden">
@@ -291,6 +304,3 @@
   </footer>
 </body>
 </html>
-
-
-
