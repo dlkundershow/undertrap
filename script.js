@@ -66,10 +66,18 @@ function onSelectCharacter(e) {
   selectingSlot = null;
   drawScene();
 
+  // 👇 Desplazar suavemente hacia el canvas
+  document.getElementById("fightCanvas").scrollIntoView({ 
+    behavior: "smooth", 
+    block: "center" 
+  });
+
+  // Si ambos ya están elegidos → arrancar juego
   if (player1 && player2) {
     startPingPong();
   }
 }
+
 
 function disableSelection() {
   document.querySelectorAll(".catalogo .item").forEach(item => {
